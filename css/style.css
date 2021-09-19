@@ -145,11 +145,12 @@ a {
 .header_section{
 	width: 100%; 
 	float: left;
-	background-image: url(../images/banner.jpg);
+	/*background-image: url(../images/banner.jpg);*/
 	height: auto;
 	padding-top: 20px;	
 	background-size: cover;
     background-repeat: no-repeat;
+    background: #000;
 }
 
 .active{ 
@@ -229,17 +230,25 @@ a {
 
 .numbar_text {
     background-color: #f7941d;
-    width: 10%;
+    width: 200px;
     text-align: center;
-    float: right;
-    padding-top: 20px;
+   
+    padding-top: 13px;
     color: #ffffff;
+    border-radius: 1px 2px 1px 1px;
+
+}
+ 
+.code_sample{
+    border: 1px solid #eee; width: 100%;
+background: #ddd;
+    min-height: 10px; padding: 10px; font-size: 20px;
 }
 
 .about_section{
 	width: 100%;
 	float: left;
-	background-image: url(../images/about-img.jpg);
+	/*background-image: url(../images/about-img.jpg);*/
 	height: auto;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -261,8 +270,8 @@ a {
   width: 100%;
   float: left;
   font-size: 50pt;
-  text-align: right;
-  margin-top: 70px;
+  text-align: left;
+  margin-top: 70px; display: block;
 
 }
 
