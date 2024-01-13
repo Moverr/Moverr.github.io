@@ -1,500 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Muyinda Rogers</title>
-	 <link rel="stylesheet" href="styles.scss">
+	<meta charset="utf-8">
+
+
+	<title>timeline events area - Bootdey.com</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			margin-top: 20px;
+		}
+
+		.timeline_area {
+			position: relative;
+			z-index: 1;
+		}
+
+		.single-timeline-area {
+			position: relative;
+			z-index: 1;
+			padding-left: 180px;
+		}
+
+		@media only screen and (max-width: 575px) {
+			.single-timeline-area {
+				padding-left: 100px;
+			}
+		}
+
+		.single-timeline-area .timeline-date {
+			position: absolute;
+			width: 180px;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-ms-grid-row-align: center;
+			align-items: center;
+			-webkit-box-pack: end;
+			-ms-flex-pack: end;
+			justify-content: flex-end;
+			padding-right: 60px;
+		}
+
+		@media only screen and (max-width: 575px) {
+			.single-timeline-area .timeline-date {
+				width: 100px;
+			}
+		}
+
+		.single-timeline-area .timeline-date::after {
+			position: absolute;
+			width: 3px;
+			height: 100%;
+			content: "";
+			background-color: #ebebeb;
+			top: 0;
+			right: 30px;
+			z-index: 1;
+		}
+
+		.single-timeline-area .timeline-date::before {
+			position: absolute;
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			background-color: #f1c40f;
+			content: "";
+			top: 50%;
+			right: 26px;
+			z-index: 5;
+			margin-top: -5.5px;
+		}
+
+		.single-timeline-area .timeline-date p {
+			margin-bottom: 0;
+			color: #020710;
+			font-size: 13px;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+
+		.single-timeline-area .single-timeline-content {
+			position: relative;
+			z-index: 1;
+			padding: 30px 30px 25px;
+			border-radius: 6px;
+			margin-bottom: 15px;
+			margin-top: 15px;
+			-webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+			box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+			border: 1px solid #ebebeb;
+		}
+
+		@media only screen and (max-width: 575px) {
+			.single-timeline-area .single-timeline-content {
+				padding: 20px;
+			}
+		}
+
+		.single-timeline-area .single-timeline-content .timeline-icon {
+			-webkit-transition-duration: 500ms;
+			transition-duration: 500ms;
+			width: 30px;
+			height: 30px;
+			background-color: #f1c40f;
+			-webkit-box-flex: 0;
+			-ms-flex: 0 0 30px;
+			flex: 0 0 30px;
+			text-align: center;
+			max-width: 30px;
+			border-radius: 50%;
+			margin-right: 15px;
+		}
+
+		.single-timeline-area .single-timeline-content .timeline-icon i {
+			color: #ffffff;
+			line-height: 30px;
+		}
+
+		.single-timeline-area .single-timeline-content .timeline-text h6 {
+			-webkit-transition-duration: 500ms;
+			transition-duration: 500ms;
+		}
+
+		.single-timeline-area .single-timeline-content .timeline-text p {
+			font-size: 13px;
+			margin-bottom: 0;
+		}
+
+		.single-timeline-area .single-timeline-content:hover .timeline-icon,
+		.single-timeline-area .single-timeline-content:focus .timeline-icon {
+			background-color: #020710;
+		}
+
+		.single-timeline-area .single-timeline-content:hover .timeline-text h6,
+		.single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+			color: #3f43fd;
+		}
+
+		.pre {
+			width: 800px;
+			overflow: hidden;
+			height: 200px;
+			overflow-y: scroll;
+		}
+
+		pre {
+			background-color: #373c46;
+			color: #ffffff;
+			padding: 5px;
+			text-align: left;
+		}
+	</style>
 </head>
+
 <body>
-	
-	<script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<section class="timeline_area section_padding_130">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-sm-8 col-lg-6">
 
-<h2>Muyinda Rogers Timeline</h2>
-<h1>Updates about my works</h1>
-
-<div class="timeline">
-
-	<!--first-->
-	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-		<div class="timeline__event__icon ">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			September 1985
-		</div>
-		<div class="timeline__event__content ">
-			<div class="timeline__event__title">
-				Super Mario Brothers
+					<div class="section_heading text-center">
+						<h6>Muyinda Rogers</h6>
+						<h3>Personal Timeline</h3>
+						<div class="line"></div>
+					</div>
+				</div>
 			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
+			<div class="row">
+				<div class="col-12">
 
-	<!--second-->
+					<div class="apland-timeline-area">
 
-	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
+						<div class="single-timeline-area">
+							<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+								style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+								<p>14 Jan 2024</p>
+							</div>
+							<div class="row">
+								<div class="col-12 col-md-6 col-lg-12">
+									<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+										style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+										<div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i>
+										</div>
+										<div class="timeline-text">
+											<h6>Visitation Book</h6>
+											<p>
+												Registering of filters, Filters are components that help process http
+												requests and responses before
+												reaching controllers gloabally, they are used for logging, security etc.
+												Here is how to register a filter
+												<br />1) consider a logging class
+											<div class="pre">
+												<pre>
 
-		</div>
-		<div class="timeline__event__date">
-			June 1986
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Bros: The Lost Levels
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
 
-	<!--third-->
+package filters
+import akka.stream.Materializer
+import play.api.mvc.{Filter, RequestHeader, Result}
+import javax.inject.Inject
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
+class LoggingFilter @Inject()(implicit val mat: Materializer) extends Filter {
+ @Override def apply(nextFilter: RequestHeader => Future[Result])(requestHeader: RequestHeader): Future[Result] = {
+val startTime = System.currentTimeMillis()
+nextFilter(requestHeader).map { result =>
+val endTime = System.currentTimeMillis()
+val requestTime = endTime - startTime
+println("This filter is working gracefully  ")
+println(s"${requestHeader.method} ${requestHeader.uri} took ${requestTime} ms and returned ${result.header.status}")
+result
+}
+}
+}
+</pre>
+											</div>
 
-	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
 
-		</div>
-		<div class="timeline__event__date">
-			October 1988
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Bros. 2
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
+											<br />
+											2) Register the filters to the general filters class. just like below <br />
+											<div class="pre">
+												<pre>
+package filters
 
-		</div>
-	</div>
+import play.api.http.HttpFilters
+import play.api.mvc.EssentialFilter
+import play.filters.csrf.CSRFFilter
 
-	<!--forth-->
+import javax.inject.Inject
 
-	<div class="timeline__event animated fadeInUp timeline__event--type1">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
+class Filters @Inject()(csrfFilter: CSRFFilter,
+                        authenticationFilter: AuthenticationFilter,
+                          logginfilter:LoggingFilter) extends HttpFilters {
+  def filters: Seq[EssentialFilter] = Seq(csrfFilter, authenticationFilter,logginfilter)
+}
+</pre>
+											</div>
+											<br />
+											2) Register the filters class to the application.conf <br />
+											<div class="pre">
+												<pre>
 
-		</div>
-		<div class="timeline__event__date">
-			October 1988
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Bros. 3
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
 
-	<!--first-->
-	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-		<div class="timeline__event__icon ">
-			<!-- <i class="lni-sport"></i>-->
+play.http.filters = "filters.Filters"
+		</pre>
+											</div>
 
-		</div>
-		<div class="timeline__event__date">
-			April 1989
-		</div>
-		<div class="timeline__event__content ">
-			<div class="timeline__event__title">
-				Super Mario Land
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
+											</p>
+										</div>
+									</div>
+								</div>
 
-	<!--second-->
 
-	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
 
-		</div>
-		<div class="timeline__event__date">
-			November 1990
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario World
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
 
-	<!--third-->
+							</div>
+						</div>
 
-	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
 
-		</div>
-		<div class="timeline__event__date">
-			October 1992
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Land: 6 Golden Coins
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
 
-		</div>
-	</div>
+						<div class="single-timeline-area">
+							<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+								style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+								<p>13 Jan 2024</p>
+							</div>
+							<div class="row">
+								<div class="col-12 col-md-6 col-lg-12">
+									<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+										style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+										<div class="timeline-icon"><i class="fa fa-address-card" aria-hidden="true"></i>
+										</div>
+										<div class="timeline-text">
+											<h6>Deployed v1.0.0-alpha Auth Service</h6>
+											<p>
+												The project is a multi project Authentication application,
+												meant to handle all my application as a service.
+											<ul>
+												<li> Spring boot</li>
+												<li> Postgresql </li>
+												<li> Docker </li>
+											</ul>
 
-	<!--forth-->
+											</p>
+										</div>
+									</div>
+								</div>
 
-	<div class="timeline__event animated fadeInUp timeline__event--type1">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
 
-		</div>
-		<div class="timeline__event__date">
-			August 1995
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario World 2: Yoshi's Island
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
 
-	<!--first-->
-	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-		<div class="timeline__event__icon ">
-			<!-- <i class="lni-sport"></i>-->
 
-		</div>
-		<div class="timeline__event__date">
-			June 1996
-		</div>
-		<div class="timeline__event__content ">
-			<div class="timeline__event__title">
-				Super Mario 64
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
+							</div>
+						</div>
 
-	<!--second-->
+						<div class="single-timeline-area">
+							<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+								style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+								<p>2020</p>
+							</div>
+							<div class="row">
+								<div class="col-12 col-md-6 col-lg-4">
+									<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+										style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+										<div class="timeline-icon"><i class="fa fa-briefcase" aria-hidden="true"></i>
+										</div>
+										<div class="timeline-text">
+											<h6>Updated 4.4.0</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-4">
+									<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+										style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+										<div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i>
+										</div>
+										<div class="timeline-text">
+											<h6>Fixed bug</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			July 2002
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Sunshine
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--third-->
-
-	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			May 2006
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				New Super Mario Bros
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-
-		</div>
-	</div>
-
-	<!--forth-->
-
-	<div class="timeline__event animated fadeInUp timeline__event--type1">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			November 2007
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Galaxy
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
+						<div class="single-timeline-area">
+							<div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+								style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+								<p>2019</p>
+							</div>
+							<div class="row">
+								<div class="col-12 col-md-6 col-lg-4">
+									<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+										style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+										<div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i>
+										</div>
+										<div class="timeline-text">
+											<h6>Updated 4.0</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-4">
+									<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+										style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+										<div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i>
+										</div>
+										<div class="timeline-text">
+											<h6>Fixed bug</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-6 col-lg-4">
+									<div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s"
+										style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+										<div class="timeline-icon"><i class="fa fa-picture-o" aria-hidden="true"></i>
+										</div>
+										<div class="timeline-text">
+											<h6>Reach 500 Users</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
 
-	<!--first-->
-	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-		<div class="timeline__event__icon ">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			November 2009
-		</div>
-		<div class="timeline__event__content ">
-			<div class="timeline__event__title">
-				New Super Mario Bros. Wii
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--second-->
-
-	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			May 2010
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Galaxy 2
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--third-->
-
-	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			November 2011
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario 3D Land
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-
-		</div>
-	</div>
-
-	<!--forth-->
-
-	<div class="timeline__event animated fadeInUp timeline__event--type1">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			July 2012
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				New Super Mario Bros 2
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--first-->
-	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-		<div class="timeline__event__icon ">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			November 2012
-		</div>
-		<div class="timeline__event__content ">
-			<div class="timeline__event__title">
-				New Super Mario Bros. U
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--second-->
-
-	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			November 2013
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario 3D World
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--third-->
-
-	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			September 2015
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Maker
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-
-		</div>
-	</div>
-
-	<!--forth-->
-
-	<div class="timeline__event animated fadeInUp timeline__event--type1">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			December 2016
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Run
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--first-->
-	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
-		<div class="timeline__event__icon ">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			October 2017
-		</div>
-		<div class="timeline__event__content ">
-			<div class="timeline__event__title">
-				Super Mario Odyssey
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--second-->
-
-	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			June 2019
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Maker 2
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-	<!--third-->
-
-	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			February 2021
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario 3D World + Bowser's Fury
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-
-		</div>
-	</div>
-	<!--forth-->
-
-	<div class="timeline__event animated fadeInUp timeline__event--type1">
-		<div class="timeline__event__icon">
-			<!-- <i class="lni-sport"></i>-->
-
-		</div>
-		<div class="timeline__event__date">
-			December 2016
-		</div>
-		<div class="timeline__event__content">
-			<div class="timeline__event__title">
-				Super Mario Run
-			</div>
-			<div class="timeline__event__description">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
-			</div>
-		</div>
-	</div>
-
-</div>
-
+	</script>
 </body>
+
 </html>
